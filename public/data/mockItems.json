@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "itemName": "카메라",
+    "imageSrc": "/images/camera1.jpg",
+    "price": 115000,
+    "description": "상품 정보가 여기에 표시됩니다.",
+    "shopName": "subbro",
+    "purchaseDate": "2024.11.14"
+  },
+  {
+    "id": 2,
+    "itemName": "빈티지 타자기",
+    "imageSrc": "/images/typewriter1.jpg",
+    "price": 90000,
+    "description": "고풍스러운 타자기입니다.",
+    "shopName": "subbro",
+    "purchaseDate": "2024.11.14"
+  },
+  {
+    "id": 3,
+    "itemName": "레코드 플레이어",
+    "imageSrc": "/images/lp.jpg",
+    "price": 120000,
+    "description": "레코드와 함께 돌아가는 빈티지 플레이어.",
+    "shopName": "subbro",
+    "purchaseDate": "2024.11.14"
+  },
+  {
+    "id": 4,
+    "itemName": "라디오",
+    "imageSrc": "/images/radio1.png",
+    "price": 150000,
+    "description": "옛날 고전음악 분위기를 느낄 수 있는 라디오.",
+    "shopName": "subbro",
+    "purchaseDate": "2024.11.14"
+  },
+  {
+    "id": 5,
+    "itemName": "스피커",
+    "imageSrc": "/images/speaker1.jpg",
+    "price": 80000,
+    "description": "빈티지 스피커로 음악을 즐기세요.",
+    "shopName": "elice",
+    "purchaseDate": "2024.11.14"
+  },
+  {
+    "id": 6,
+    "itemName": "폴라로이드 카메라",
+    "imageSrc": "/images/camera2.jpg",
+    "price": 95000,
+    "description": "즉석에서 사진을 출력하는 폴라로이드.",
+    "shopName": "elice",
+    "purchaseDate": "2024.11.14"
+  }
+]

@@ -20,7 +20,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    "baseUrl": "./src", // src 폴더를 기준으로 설정
+    "paths": {
+      "components/*": ["components/*"] // components 경로 alias 설정
+    }
   },
   "include": ["src"]
 }

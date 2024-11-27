@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "핸드폰",
+    "price": 22222,
+    "imgUrl": "/images/phone1.jpg",
+    "description": "내 핸드폰"
+  },
+  {
+    "id": 2,
+    "name": "핸드폰",
+    "price": 22222,
+    "imgUrl": "/images/phone2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "카메라",
+    "price": 22222,
+    "imgUrl": "/images/camera1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "카메라",
+    "price": 22222,
+    "imgUrl": "/images/camera2.jpg"
+  },
+
+  {
+    "id": 5,
+    "name": "스피커",
+    "price": 22222,
+    "imgUrl": "/images/speaker1.jpg"
+  },
+  {
+    "id": 6,
+    "name": "lp",
+    "price": 22222,
+    "imgUrl": "/images/lp.jpg"
+  },
+  {
+    "id": 7,
+    "name": "타자기",
+    "price": 22222,
+    "imgUrl": "/images/typewriter1.jpg"
+  },
+  {
+    "id": 8,
+    "name": "타자기",
+    "price": 22222,
+    "imgUrl": "/images/typewriter2.jpg"
+  },
+  {
+    "id": 9,
+    "name": "핸드폰",
+    "price": 22222,
+    "imgUrl": "/images/phone1.jpg",
+    "description": "내 핸드폰"
+  },
+  {
+    "id": 10,
+    "name": "핸드폰",
+    "price": 22222,
+    "imgUrl": "/images/phone2.jpg"
+  },
+  {
+    "id": 11,
+    "name": "카메라",
+    "price": 22222,
+    "imgUrl": "/images/camera1.jpg"
+  },
+  {
+    "id": 12,
+    "name": "카메라",
+    "price": 22222,
+    "imgUrl": "/images/camera2.jpg"
+  },
+
+  {
+    "id": 13,
+    "name": "스피커",
+    "price": 22222,
+    "imgUrl": "/images/speaker1.jpg"
+  },
+  {
+    "id": 14,
+    "name": "lp",
+    "price": 22222,
+    "imgUrl": "/images/lp.jpg"
+  },
+  {
+    "id": 15,
+    "name": "타자기",
+    "price": 22222,
+    "imgUrl": "/images/typewriter1.jpg"
+  },
+  {
+    "id": 16,
+    "name": "타자기",
+    "price": 22222,
+    "imgUrl": "/images/typewriter2.jpg"
+  }
+]

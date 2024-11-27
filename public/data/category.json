@@ -1,0 +1,7 @@
+[
+  { "id": 1, "categoryName": "카메라", "value": "camera" },
+  { "id": 2, "categoryName": "휴대폰", "value": "phone" },
+  { "id": 3, "categoryName": "오디오 기기", "value": "audio" },
+  { "id": 4, "categoryName": "타자기", "value": "typewriter" },
+  { "id": 5, "categoryName": "디스플레이", "value": "display" }
+]

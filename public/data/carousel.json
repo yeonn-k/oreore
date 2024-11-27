@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "imgUrl": "/images/carousel1.jpg",
+    "text": "가치 있는 시간, 다시 손 안에"
+  },
+  {
+    "id": 2,
+    "imgUrl": "/images/carousel2.jpg",
+    "text": "지난 추억, 새로운 시작으로"
+  }
+]
