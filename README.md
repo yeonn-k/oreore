@@ -1,50 +1,33 @@
-# React + TypeScript + Vite
+# Project oreore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🧚‍♂️ 개발 기간 및 인원
 
-Currently, two official plugins are available:
+- 개발 기간 : 2024/11/12 ~ 2024/11/25
+- 개발 인원 : 프론트엔드 2명(김지연, 김하영) / 백엔드 3명(최준영, 이서빈, 한지수)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🪴 서비스 소개
+- 서비스명 : oreore( 오래오래 )
+  - 유저가 각자의 중고 물품을 등록하고 거래할 수 있는 플랫폼입니다.
 
-## Expanding the ESLint configuration
+## ✨ 구현 기능
+### 📋 메인페이지
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
+### ✏️ 상품 등록/수정 페이지
+ 
+---
+### 🔍 상품 상세 페이지
 
-- Configure the top-level `parserOptions` property like this:
+---
+### 👤 마이 페이지
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
+### 🎨 aws S3
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
+### 📢 toast
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 📚 기술 스택
+|TypeScript|React|Styled-Components|
+|:---:|:---:|:---:|
+| <img src="https://techstack-generator.vercel.app/ts-icon.svg" alt="icon" width="65" height="65" /> | <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="65" height="65" /> | <img src="https://www.styled-components.com/atom.png" width="65" height="65" /> |
