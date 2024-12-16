@@ -1,4 +1,4 @@
-# Project oreore
+# Project oreore
 
 ## 🧚‍♂️ 개발 기간 및 인원
 
