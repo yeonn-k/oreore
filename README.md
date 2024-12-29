@@ -30,6 +30,7 @@
       return props.theme.color.blue30;
     }};
    ```
+   
 2) image carousel
    - `transform: translateX()`와 현재 이미지의 idx 값을 활용하여 필요한 값만큼 씩 이미지를 옆으로 밀어내는 방식으로 이미지 캐러셀 구현
 
