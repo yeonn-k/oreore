@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { toast } from "react-toastify";
 
-import uploadImageToS3 from "./uploadImageToS3";
+import uploadImageToS3 from "utils/uploadImageToS3";
 
 const useHandleImageChange = (type: string) => {
   const imgInputRef = useRef<HTMLInputElement | null>(null);
