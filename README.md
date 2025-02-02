@@ -76,7 +76,7 @@
 
 ---
 ### 🛜 interceptor
-1) request: 회원 여부 확인
+1) Request
    ```
    export const requestInterceptor = (config: InternalAxiosRequestConfig) => {
      const token = localStorage.getItem("token") || "";
@@ -88,10 +88,35 @@
      return config;
    };
    ```
-   - 요청 시 토큰 여부를 확인하고 토큰이 있을 경우 헤더에 토큰을 담아서 요청
-2) error: 에러 처리
-   - `error.response.status`: 401
+   - localStorage에서 토큰을 가져와 헤더에 추가
+2) Error 핸들링
+   ```
+   export const errorInterceptor = async (error: AxiosError) => {
+    if (error.response?.status === 401) {
+      console.warn("❗️Unauthorized error: Redirecting to login");
+      const { openModal } = useModalStore.getState();
+      openModal("login");
+    } else {
+      if (error.response) {
+        console.error({
+          status: error.response.status,
+          data: error.response.data,
+        });
+      } else if (error.request) {
+        console.error("❌ No response: ", error.request);
+      } else {
+        console.error("❌Error message: ", error.message);
+      }
+      return Promise.reject(error);
+    }
+  };
+  ```
+  - 401 error
      - 모달을 활용하여 유저에게 로그인이 필요한 페이지임을 알리고 확인 시 로그인 페이지로 리다이렉션
+  - 에러 상태 로깅
+     - 응답 에러( `error.response` ): 상태 코드와 응답 데이터를 콘솔에 기록하여 디버깅을 도움
+     - 응답 없음( `error.request` ): 네트워크 문제, 서버 다운 등의 상황을 기록하여 문제 추적을 도움
+     - 기타 에러 메세지를 출력
 ---
 ### 🎨 aws S3
 1) 이미지 등록
