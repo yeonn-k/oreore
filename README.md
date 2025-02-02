@@ -14,7 +14,7 @@
 ### 📋 메인페이지
 1) grid UI
    - gird의 row 와 item idx 값을 활용하여 지그재그 형태로 색상이 번갈아 나타나는 그리드 구현
-     ```
+     ```typescript
      background-color: ${(props) => {
       const isOddRow = props.row % 2 !== 0;
       const isOddIdx = (props.idx + 1) % 2 !== 0;
@@ -46,7 +46,7 @@
 3) 파일 이미지 미리보기
    - `URL.createObjectURL(files[0])를 통해 미리보기 URL을 생성하고 useState로 상태 업데이트
    - 파일 데이터를 읽고 URL을 해제하여 메모리 누수 방지
-     ```
+     ```typescript
      const reader = new FileReader();
      reader.readAsDataURL(file); // 파일 데이터 읽음
      reader.onloadend = () => {
@@ -77,7 +77,7 @@
 ---
 ### 🛜 interceptor
 1) Request
-   ```
+   ```typescript
    export const requestInterceptor = (config: InternalAxiosRequestConfig) => {
      const token = localStorage.getItem("token") || "";
 
@@ -89,8 +89,9 @@
    };
    ```
    - localStorage에서 토큰을 가져와 헤더에 추가
+
 2) Error 핸들링
-   ```
+   ```typescript
    export const errorInterceptor = async (error: AxiosError) => {
     if (error.response?.status === 401) {
       console.warn("❗️Unauthorized error: Redirecting to login");
@@ -109,14 +110,15 @@
       }
       return Promise.reject(error);
     }
-  };
-  ```
+   };
+   ```
   - 401 error
-     - 모달을 활용하여 유저에게 로그인이 필요한 페이지임을 알리고 확인 시 로그인 페이지로 리다이렉션
+    - 모달을 활용하여 유저에게 로그인이 필요한 페이지임을 알리고 확인 시 로그인 페이지로 리다이렉션
   - 에러 상태 로깅
-     - 응답 에러( `error.response` ): 상태 코드와 응답 데이터를 콘솔에 기록하여 디버깅을 도움
-     - 응답 없음( `error.request` ): 네트워크 문제, 서버 다운 등의 상황을 기록하여 문제 추적을 도움
-     - 기타 에러 메세지를 출력
+    - 응답 에러( `error.response` ): 상태 코드와 응답 데이터를 콘솔에 기록하여 디버깅을 도움
+    - 응답 없음( `error.request` ): 네트워크 문제, 서버 다운 등의 상황을 기록하여 문제 추적을 도움
+    - 기타 에러 메세지를 출력
+
 ---
 ### 🎨 aws S3
 1) 이미지 등록
