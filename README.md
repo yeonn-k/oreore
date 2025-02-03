@@ -42,22 +42,9 @@
    - 기능 부분은 커스텀 hook으로 분리 구현하여 별도 처리없이 다른 페이지에서도 사용 가능
 2) 접근 방식에 따른 페이지 및 기능 구분
    - `location.pathname`으로 등록/수정을 구분
-   - 상품 수정을 위한 접근일 경우 아이템 정보를 `GET` 해서 해당하는 input의 value로 넣어줌으로써 사용자 편의 고려
-3) 파일 이미지 미리보기
-   - `URL.createObjectURL(files[0])를 통해 미리보기 URL을 생성하고 useState로 상태 업데이트
-   - 파일 데이터를 읽고 URL을 해제하여 메모리 누수 방지
-     ```typescript
-     const reader = new FileReader();
-     reader.readAsDataURL(file); // 파일 데이터 읽음
-     reader.onloadend = () => {
-      if (!imgInputRef.current) return; // 파일 입력 참조 X: 종료
-     };
-
-     // URL 해제: 메모리 누수 방지
-     return () => URL.revokeObjectURL(objectUrl);
-     ```
+   - 상품 수정을 위한 접근일 경우 아이템 정보를 `GET` 해서 해당하는 input의 value로 넣어줌으로써 유저 편의 고려
 3) 수정 페이지 보안
-   - 수정 요청 URL을 직접적으로 노출하지 않음으로써 사용자가 잘못된 경로로 접근하거나 임의 요청을 보내는 것을 방지
+   - 수정 요청 URL을 직접적으로 노출하지 않음으로써 유저가 잘못된 경로로 접근하거나 임의 요청을 보내는 것을 방지
    - 수정 상품 id는 `location.state`를 활용해 전달하고 url 경로는 코드 내에서 동적으로 생성
    
 ---
@@ -121,8 +108,37 @@
 
 ---
 ### 🎨 aws S3
-1) 이미지 등록
-   - 직접 업로드 대신 `presignedUrl`을 통해 보다 안전하고 효율적으로 데이터를 업로드
+- 이미지 등록
+  - 직접 업로드 대신 `presignedUrl`을 통해 보다 안전하고 효율적으로 데이터를 업로드
+- ***utils/uploadImageToS3.tsx***
+  - AWS S3에 이미지를 업로드 하는 함수
+  - presigned URL 생성 후 해당 URL을 사용하여 S3에 이미지 업로드 후 이미지의 URL을 반환
+- ***hooks/useHandleImageChange.tsx***
+  - 유저가 이미지를 선택하면 uploadImageToS3 함수를 통해 AWS S3에 업로드하고 해당 URL 반환
+  - 업로드된 이미지의 미리보기를 제공하고 에러 발생 시 알림을 제공하여 UX 향상
+  
+  ```typescript
+  // 사용 에시
+  <S.UploadImgBox onClick={handleImgInputClick}>
+    {hasFile ? (
+      <>
+        <S.UploadedImg src={preview} alt="미리보기" />
+      </>
+    ) : (
+      <>
+        <S.UploadIcon />
+        <S.UploadText>이미지 등록</S.UploadText>
+        <S.Essential>필수 등록</S.Essential>
+      </>
+    )}
+  <S.ImgUpload
+    type="file"
+    accept="image/jpg, image/jpeg"
+    multiple
+    ref={imgInputRef}
+    onChange={handleImageChange}
+  />
+  ```
 
 ---
 ### 📢 toast
